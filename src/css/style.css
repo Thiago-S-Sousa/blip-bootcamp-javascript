@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Alegreya", serif;
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  height: 10dvh;
+  width: 100%;
+
+  background-color: #000000d3;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 5rem;
+
+    & .logo {
+      font-size: 3.5rem;
+      font-weight: 1000;
+      letter-spacing: -0.1rem;
+      color: #8f6654;
+    }
+
+    & .play {
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ddcf07;
+    }
+
+    & .play:hover {
+      color: #faea0d;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+
+  & .banner {
+    height: 120dvh;
+    width: 100%;
+
+    background: url(/src/img/AgeOfMy.png) no-repeat top center / cover;
+
+    & .mask {
+      display: flex;
+      align-items: flex-end;
+      text-transform: uppercase;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: #00000036;
+
+      & .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        width: 100%;
+        padding: 0 0 7rem 10rem;
+
+        & h1 {
+          font-size: 7rem;
+          font-weight: 1000;
+          line-height: 1.2;
+          color: #f5ece8;
+
+          & .mobile {
+            display: none;
+          }
+        }
+
+        & a {
+          font-size: 2rem;
+          font-weight: 800;
+          text-decoration: none;
+
+          padding: 1.5rem 4rem;
+
+          color: #ddcf07;
+          background-color: #55362ae5;
+        }
+
+        & a:hover {
+          color: #faea0d;
+          background-color: #55362a;
+        }
+      }
+    }
+  }
+
+  & .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    background-color: #000000d3;
+
+    padding: 6rem 5rem;
+
+    & .portal {
+      width: 40%;
+
+      & .img {
+        height: 50rem;
+        width: 100%;
+
+        background: url(/src/img/menuAgeOfMy.png) no-repeat top center / contain;
+
+        & .content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          height: 100%;
+
+          & .portal-navigation {
+            & h2 {
+              font-size: 1.6rem;
+              font-weight: 600;
+              text-transform: uppercase;
+
+              text-align: center;
+              padding-bottom: 3rem;
+
+              color: #ddcf07;
+            }
+
+            & .nav-list {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              gap: 1rem;
+
+              list-style-type: none;
+
+              & li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                font-size: 1.6rem;
+                font-weight: 600;
+                width: 18rem;
+
+                & a {
+                  width: 100%;
+
+                  text-decoration: none;
+                  color: #ddcf07;
+                  background-color: #0c14a2;
+
+                  padding: 0.4rem 0;
+                  border: 0.3rem solid #ddcf07;
+                  border-radius: 5rem;
+                }
+
+                & a:hover {
+                  color: #faea0d;
+                  border: 0.3rem solid #faea0d;
+                }
+
+                & .disabled {
+                  pointer-events: none;
+                  cursor: not-allowed;
+                  opacity: 0.7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      width: 60%;
+
+      & p {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #f5ece8;
+
+        padding-right: 8rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header {
+    height: 8dvh;
+
+    & .navigation {
+      padding: 0 1.5rem;
+
+      & .logo {
+        font-size: 2.4rem;
+      }
+
+      & .play {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+    }
+  }
+
+  .main {
+    & .banner {
+      height: 85dvh;
+
+      & .mask {
+        & .content {
+          gap: 3rem;
+
+          padding: 0 1.5rem 8rem 1.5rem;
+
+          & h1 {
+            font-size: 4.2rem;
+            font-weight: 900;
+            padding-right: 5rem;
+            /* line-height: 1.1; */
+
+            & .mobile {
+              display: block;
+            }
+          }
+
+          & a {
+            font-size: 1.8rem;
+            padding: 1rem 2.5rem;
+          }
+        }
+      }
+    }
+
+    & .menu {
+      flex-direction: column;
+      gap: 4rem;
+      padding: 4rem 1.5rem;
+
+      & .portal {
+        width: 100%;
+
+        & .img {
+          height: 40rem;
+
+          & .content {
+            & .portal-navigation {
+              & h2 {
+                font-size: 1.8rem;
+              }
+
+              & .nav-list {
+                & li {
+                  width: 15rem;
+                  font-size: 1.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & .text {
+        width: 100%;
+
+        & p {
+          font-size: 1.8rem;
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
