@@ -65,7 +65,7 @@ html {
     height: 120dvh;
     width: 100%;
 
-    background: url(/src/img/AgeOfMy.png) no-repeat top center / cover;
+    background: url(../img/AgeOfMy.png) no-repeat top center / cover;
 
     & .mask {
       display: flex;
@@ -134,7 +134,7 @@ html {
         height: 50rem;
         width: 100%;
 
-        background: url(/src/img/menuAgeOfMy.png) no-repeat top center / contain;
+        background: url(../img/menuAgeOfMy.png) no-repeat top center / contain;
 
         & .content {
           display: flex;
@@ -255,7 +255,6 @@ html {
             font-size: 4.2rem;
             font-weight: 900;
             padding-right: 5rem;
-            /* line-height: 1.1; */
 
             & .mobile {
               display: block;
